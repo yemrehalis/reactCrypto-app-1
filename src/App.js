@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Coins from "./components/Coins";
+import Coinitem from "./components/Coinitem";
 
 
 
@@ -22,6 +24,7 @@ function App() {
 
   return (
     <>
+      <Coins coins={coins} />
 
     </>
   );
