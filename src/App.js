@@ -2,15 +2,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Coins from "./components/Coins";
-import Coinitem from "./components/Coinitem";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Coin from './routes/Coin'
 
 
 
 function App() {
 
   const [coins, setCoins] = useState([])
-  const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+  const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false'
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -26,7 +27,14 @@ function App() {
   return (
     <>
       <Navbar />
-      <Coins coins={coins} />
+      <Routes>
+        <Route path="/" element={<Coins coins={coins} />} />
+        <Route path="/coin" element={<Coin />}>
+          <Route path=":coinId" element={<Coin />} />
+
+        </Route>
+      </Routes>
+
 
 
     </>
