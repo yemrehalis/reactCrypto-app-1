@@ -47,8 +47,9 @@ table {
 }
 
 td, th {
-    padding: 8px;
+    padding: 9px;
     text-align: center;
+    justify-content: center;
 }
 th {
     background-color: #68f780;
