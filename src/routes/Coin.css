@@ -4,8 +4,8 @@
     padding: .7rem 1rem;
     display: flex;
     flex-direction: column;
-    background-color: #26272b;
-    box-shadow: 0px 0px 12px #18191b;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 12px #d8d8d8;
     border-radius: 8px;
     
 }
@@ -15,12 +15,12 @@
 }
 
 .rank-btn{
-    border: 1px solid #68f780;
-    box-shadow: 0px 0px 10px  #68f780;
-    background-color: #68f780;
+    border: 1px solid #1868fc;
+    box-shadow: 0px 0px 1px  #1868fc;
+    background-color: #1868fc;
     border-radius: 8px;
     padding: .2rem;
-    color: black;
+    color: white;
 }
 .info {
     display: grid;
@@ -60,8 +60,8 @@ td, th {
     justify-content: center;
 }
 th {
-    background-color: #68f780;
-    color: black;
+    background-color: #1868fc;
+    color: white;
     border-radius: 5px;
 }
 
